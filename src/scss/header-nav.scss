@@ -1,0 +1,16 @@
+.header-nav {
+  display: flex;
+  align-items: center;
+  min-height: 88px;
+
+  &__logo {
+    background-image: url(../img/logo.svg);
+    margin-left: 16px;
+    width: 97px;
+    height: 51px;
+
+    @media (min-width: $screen-md) {
+      margin-left: 0px;
+    }
+  }
+}

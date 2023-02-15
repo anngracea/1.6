@@ -1,0 +1,66 @@
+.text-menu {
+    height: 50px;
+    min-width: 320px;
+    margin-top: 24px;
+    padding: 0px;
+    position: relative;
+  
+    @media (min-width: $screen-xl) {
+      margin-top: 0px;
+    }
+  
+    &__navigation {
+      display: flex;
+      position: relative;
+      justify-content: flex-start;
+      align-items: center;
+      overflow: scroll;
+      min-width: 320px;
+      margin-right: 16px;
+      margin-left: 16px;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    
+      @media (min-width: $screen-md) {
+        margin-left: 24px;
+      }
+    
+      @media (min-width: $screen-xl) {
+        display: flex;
+        position: relative;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        overflow: scroll;
+        min-width: 320px;
+        margin-right: 16px;
+        margin-left: 34px;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        margin-top: 8px;
+      }
+    
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  
+    &__a {
+      font-family: $font-family;
+      text-decoration: none;
+      background-color: $background-color_none;
+      border: none;
+      color: $text-color_accent;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.2px;
+      white-space: nowrap;
+      padding: 8px 16px 8px 16px;
+      &:hover {
+        border: 2px solid #b8ffec;
+        border-radius: 6px;
+        background-color: $background-color_white;
+      }
+    }
+  }

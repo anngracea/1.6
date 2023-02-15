@@ -1,0 +1,80 @@
+.icon-button {
+    width: 40px;
+    height: 40px;
+    background-color: $background-color_none;
+    border-radius: 100%;
+    background-repeat: no-repeat;
+    border: none;
+    flex-shrink: 0;
+    margin-left: 0px;
+    margin-right: 16px;
+    border-radius: 50%;
+    background-color: $buttons-color_default;
+    transition: background-color 0.7s, border 0.3s;
+  
+    @media (min-width: $screen-xl) {
+      width: 40px;
+      height: 40px;
+      background-repeat: no-repeat;
+      border: none;
+      flex-shrink: 0;
+    }
+  
+    &:hover {
+      background-color: $buttons-color_hover;
+      path {
+        fill: #ff3e79;
+      }
+    }
+    &--call {
+      display: none;
+    
+      @media (min-width: $screen-md) {
+        display: block;
+      }
+    }
+    &--chat {
+      display: none;
+    
+      @media (min-width: $screen-md) {
+        display: block;
+      }
+    }
+    &--profile {
+      display: none;
+    
+      @media (min-width: $screen-md) {
+        margin-right: 0px;
+        display: block;
+      }
+    }
+    &--burger {
+      margin-right: 0px;
+    }
+    &--search {
+      margin-right: 0;
+      margin-left: auto;
+    }
+    &--close {
+      @media (min-width: $screen-xl) {
+        display: none;
+      }
+    }
+    &--modal {
+      margin-right: auto;
+      margin-top: 24px;
+    
+      @media (min-width: $screen-md) {
+        position: relative;
+        margin-bottom: 24px;
+      }
+      @media (min-width: $screen-xl) {
+        margin-top: 0;
+        position: relative;
+        top: 38px;
+        left: -105px;
+        margin-bottom: 0;
+      }
+    }
+  }
+  

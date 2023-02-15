@@ -1,0 +1,21 @@
+.swiper-pagination {
+    display: flex;
+    left: 38px !important;
+    width: 220px !important;
+    bottom: 22px !important;
+    justify-content: space-between;
+  
+    @media (min-width: $screen-md) {
+      display: none;
+    }
+  
+    &--2 {
+      bottom: 22px !important;
+    }
+  
+    &--3 {
+      width: 108px !important;
+      left: 90px !important;
+      bottom: 0px !important;
+    }
+  }

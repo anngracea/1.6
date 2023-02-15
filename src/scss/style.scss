@@ -1,0 +1,83 @@
+$text-color: #1b1c21;
+$text-color_accent: #7e7e82;
+$text-color_placeholder: #b5b6bc;
+$text-color_active: #ff3e79;
+$text-color_modal-buttons: #ffffff;
+$font-family: 'TTLakes';
+$background-color_white: #ffffff;
+$background-color_none: transparent;
+$buttons-color_default: #ff3e79;
+$buttons-color_hover: #ffe0e9;
+$background-color_main: #f8f8f8;
+$pagination-color_default: #dddddd;
+$pagination-color_active: #b5b6bc;
+$screen-md: 768px;
+$screen-xl: 1440px;
+
+*,
+*::before,
+*::after {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: inherit;
+  font-family: 'TTLakes';
+}
+
+/*----------- ШРИФТЫ -----------------------------------------------------------------------------------------------*/
+@font-face {
+  font-family: 'TTLakes';
+  font-display: swap;
+  font-style: medium;
+  font-weight: 500;
+  /* Браузер сначала попробует найти шрифт локально */
+  /* Если браузер не поддерживает woff2, загрузит woff */
+  src: local('TTLakes'), url('../fonts/TTLakes-Medium.woff') format('woff');
+}
+@font-face {
+  font-family: 'TTLakes';
+  font-display: swap;
+  font-style: bold;
+  font-weight: 700;
+  /* Браузер сначала попробует найти шрифт локально */
+  /* Если браузер не поддерживает woff2, загрузит woff */
+  src: local('TTLakes'), url('../fonts/TTLakes-Bold.woff') format('woff');
+}
+@font-face {
+  font-family: 'TTLakes';
+  font-display: swap;
+  font-style: regular;
+  font-weight: 400;
+  /* Браузер сначала попробует найти шрифт локально */
+  /* Если браузер не поддерживает woff2, загрузит woff */
+  src: local('TTLakes'),
+    url('../fonts/TTLakesCondensed-Regular.woff') format('woff');
+}
+
+@import './background-lighten.scss';
+@import './footer.scss';
+@import './table.scss';
+@import './table-wrapper.scss';
+@import './swiper-pagination-bullet-active.scss';
+@import './swiper-pagination-bullet.scss';
+@import './swiper-pagination.scss';
+@import './fade-container.scss';
+@import './wrap.scss';
+@import './swiper-wrapper.scss';
+@import './swiper-slide.scss';
+@import './swiper.scss';
+@import './swiper-title.scss';
+@import './image.scss';
+@import './article.scss';
+@import './text-menu.scss';
+@import './main.scss';
+@import './form-button.scss';
+@import './form.scss';
+@import './icon-button.scss';
+@import './main-title.scss';
+@import './menu.scss';
+@import './header-button.scss';
+@import './header-nav.scss';
+@import './header.scss';
+@import './site.scss';
+@import './a.scss';
+@import './path.scss';

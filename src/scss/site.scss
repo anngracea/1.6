@@ -1,0 +1,11 @@
+.site {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  margin: 0;
+  overflow-x: hidden;
+
+  @media (min-width: $screen-xl) {
+    flex-direction: row;
+  }
+}

@@ -1,0 +1,8 @@
+a {
+    &:hover {
+      .wrap__icon {
+        background-color: $buttons-color_hover;
+        border: 2px solid transparent;
+      }
+    }
+  }

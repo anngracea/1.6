@@ -1,0 +1,23 @@
+.fade-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+  
+    @media (min-width: $screen-md) {
+      display: none;
+    }
+    &__right {
+      top: 0;
+      right: 0;
+      background: linear-gradient(270deg, #f8f8f8 17%, hsla(0, 0%, 97.3%, 0));
+      position: absolute;
+      height: 100%;
+      width: 24px;
+      z-index: 5;
+      &--text-menu {
+        right: 15px;
+      }
+    }
+  }
+  

@@ -1,0 +1,1544 @@
+*,
+*::before,
+*::after {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: inherit;
+  font-family: 'TTLakes';
+}
+
+/*-----------ШРИФТЫ -----------------------------------------------------------------------------------------------*/
+
+@font-face {
+  font-family: 'TTLakes';
+  font-display: swap;
+  font-style: medium;
+  font-weight: 500;
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local('TTLakes'),
+    /* Если браузер не поддерживает woff2, загрузит woff */
+      url('fonts/TTLakes-Medium.woff') format('woff');
+}
+@font-face {
+  font-family: 'TTLakes';
+  font-display: swap;
+  font-style: bold;
+  font-weight: 700;
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local('TTLakes'),
+    /* Если браузер не поддерживает woff2, загрузит woff */
+      url('fonts/TTLakes-Bold.woff') format('woff');
+}
+@font-face {
+  font-family: 'TTLakes';
+  font-display: swap;
+  font-style: regular;
+  font-weight: 400;
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local('TTLakes'),
+    /* Если браузер не поддерживает woff2, загрузит woff */
+      url('fonts/TTLakesCondensed-Regular.woff') format('woff');
+}
+/*---------- 01 ШАПКА------------------------------------------------------------------------------------------------*/
+
+.site {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  margin: 0;
+  overflow-x: hidden;
+}
+.header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #d9fff5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  min-height: 88px;
+}
+
+.header-button {
+  display: flex;
+  align-items: center;
+  min-height: 88px;
+}
+
+.header-nav__logo {
+  background-image: url(./img/logo.svg);
+  margin-left: 16px;
+  width: 97px;
+  height: 51px;
+}
+
+.header__divider {
+  background-image: url(./img/divider.svg);
+  margin-left: 16px;
+  margin-right: 20px;
+  width: 2px;
+  height: 32px;
+}
+
+
+
+/*----------СКРЫТЫЕ 3 КНОПКИ------------------------------------------------------------------------------------------------*/
+
+.icon-button--call {
+  display: none;
+}
+.icon-button--chat {
+  display: none;
+}
+
+.icon-button--profile {
+  display: none;
+}
+
+/*------------------------------------------------------------ LEFT MENU ------------------------------------------------------------*/
+
+.menu {
+  display: flex;
+  width: 320px;
+  height: 100%;
+  flex-direction: column;
+  background-color: #ffffff;
+  transform: translateX(-100%);
+  z-index: 10000;
+  position: fixed;
+}
+
+.menu__header {
+  display: flex;
+  align-items: center;
+  margin-left: 24px;
+  margin-right: 24px;
+  margin-top: 23px;
+  margin-bottom: 46px;
+}
+
+.icon-button {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border-radius: 100%;
+  background-repeat: no-repeat;
+  border: none;
+  flex-shrink: 0;
+  margin-left: 0px;
+  margin-right: 16px;
+  border-radius: 50%;
+  background-color: #ff3e79;
+  transition: background-color 0.7s, border 0.3s;
+}
+
+.icon-button--burger {
+  margin-right: 0px;
+}
+
+.icon-button:hover {
+  background-color: #ffe0e9;
+}
+
+path {
+  transition: fill 0.3s linear;
+}
+
+.icon-button:hover path {
+  fill: #ff3e79;
+}
+
+.icon-button--search {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.menu__logo {
+  background-image: url(img/logo.svg);
+  width: 97px;
+  height: 51px;
+}
+
+/*----------СЛЕВА МЕНЮ ЛИСТ------------------------------------------------------------------------------------------------*/
+
+.menu__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: #ffffff;
+}
+
+.menu__item {
+  display: block;
+  padding-bottom: 24px;
+  padding-left: 24px;
+}
+
+.menu__item a {
+  color: #1b1c21;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+}
+
+.menu__item:hover a {
+  color: #7e7e82;
+}
+
+.menu__item a::before {
+  content: '';
+  position: relative;
+  left: -24px;
+  width: 4px;
+  height: 40px;
+  top: 0px;
+  background: #41f6d7;
+  border-right: 2px solid #41f6d7;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  display: none;
+}
+
+.menu__item:hover a::before {
+  display: inline;
+}
+
+/*----------ФУТЕР ЛЕВОГО МЕНЮ------------------------------------------------------------------------------------------------*/
+
+.menu__footer {
+  margin-left: 24px;
+  margin-bottom: 32px;
+}
+
+.menu__buttons {
+  margin-bottom: 16px;
+}
+
+
+
+.menu__contacts--email {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  margin-bottom: 12px;
+}
+
+.menu__contacts--phone {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+  margin-bottom: 40px;
+}
+
+.menu__language {
+  display: flex;
+  flex-direction: row;
+}
+
+.menu__language--rus {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  padding-right: 7px;
+  color: #7e7e82;
+}
+
+.menu__language--eng {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  padding-right: 7px;
+}
+
+.menu__language--ch {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+}
+
+
+
+/*----------------------------------------------------------- модальное окно feedback и call ------------------------------------------------------------*/
+.form {
+  min-width: 320px;
+  height: 100%;
+  flex-direction: column;
+  background-color: #ffffff;
+  transform: translateX(100%);
+  z-index: 11000;
+  position: fixed;
+  left: 0;
+}
+
+.form__wrapper {
+  margin-left: 16px;
+  margin-right: 16px;
+  min-width: 288px;
+}
+
+.form__title {
+  margin-bottom: 24px;
+  width: 288px;
+  margin-top: 40px;
+}
+
+.form__h1 {
+  font-family: 'TTLakes';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+  color: #1b1c21;
+}
+
+.form__h1::before {
+  content: '';
+  position: relative;
+  left: -16px;
+  width: 2px;
+  height: 40px;
+  top: 0px;
+  background: #41f6d7;
+  border-right: 2px solid #41f6d7;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.site-button {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border-radius: 100%;
+  background-repeat: no-repeat;
+  border: none;
+  flex-shrink: 0;
+  margin-left: 0px;
+  margin-right: 16px;
+  border-radius: 50%;
+  background-color: #ff3e79;
+  transition: background-color 0.7s, border 0.3s;
+}
+
+.icon-button--modal {
+  margin-right: auto;
+  margin-top: 24px;
+}
+
+.form__feedback {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form__input {
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  height: 48px;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-left: 16px;
+}
+
+.form__input--textarea {
+  height: 118px;
+}
+
+textarea[type='text']::placeholder {
+  padding-top: 10px;
+  font-size: 16px;
+  color: #b5b6bc;
+  font-family: 'TTLakes';
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+}
+
+.form__privacy-policy {
+  margin-bottom: 19px;
+}
+
+.form-input::placeholder {
+  font-size: 16px;
+  color: #b5b6bc;
+  font-family: 'TTLakes';
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+}
+
+.form__text-policy {
+  font-family: 'TTLakes';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #7e7e82;
+}
+
+.form__text-policy > a {
+  font-family: 'TTLakes';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ff3e79;
+  text-decoration: none;
+}
+
+.form-button {
+  display: flex;
+  background: #ff3e79;
+  border-radius: 16px;
+  height: 32px;
+  width: 136px;
+  margin-left: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-button__submit {
+  background-color: transparent;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  padding-right: 13px;
+  font-family: 'TTLakes';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 24px;
+  text-align: right;
+  letter-spacing: -0.15px;
+}
+
+.form-button__submit:hover {
+  color: #ff3e79;
+}
+
+.form {
+  display: none;
+}
+
+/*------------------------------------------------------------ ШАПКА-КОНТЕНТ ДЛЯ ДЕКСТОПА ------------------------------------------------------------*/
+
+.main {
+  display: flex;
+  flex-direction: column;
+  min-width: 400px;
+  min-height: 509px;
+  background-color: #f8f8f8;
+  overflow: hidden;
+}
+
+.main-title {
+  min-height: 40px;
+  margin-top: 24px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.main-title__h1 {
+  font-family: 'TTLakes';
+  margin: 0;
+  font-size: 28px;
+  line-height: 40px;
+  letter-spacing: -0.6px;
+  position: relative;
+  font-weight: bold;
+  margin-right: auto;
+  white-space: nowrap;
+}
+
+.main-title__h1::before {
+  content: '';
+  position: absolute;
+  left: -16px;
+  width: 4px;
+  height: 40px;
+  top: 0px;
+  background: #41f6d7;
+  border-right: 2px solid #41f6d7;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.main-title__button-label {
+  display: none;
+}
+.main-title__button-item--repair {
+  display: none;
+}
+.main-title__button-item--checkstatus {
+  display: none;
+}
+
+/*------------------------------------------------------------ ТЕКСТОВОЕ МЕНЮ СО СКРОЛЛОМ ------------------------------------------------------------*/
+
+.text-menu {
+  height: 50px;
+  min-width: 320px;
+  margin-top: 24px;
+  padding: 0px;
+  position: relative;
+}
+
+.text-menu__navigation {
+  display: flex;
+  position: relative;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: scroll;
+  min-width: 320px;
+  margin-right: 16px;
+  margin-left: 16px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.text-menu__navigation::-webkit-scrollbar {
+  display: none;
+}
+.text-menu__a {
+  font-family: 'TTLakes';
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  color: #7e7e82;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  white-space: nowrap;
+  padding: 8px 16px 8px 16px;
+}
+
+.text-menu__a:hover {
+  border: 2px solid #b8ffec;
+  border-radius: 6px;
+
+  background-color: #ffffff;
+}
+
+/*-------------------------------------------------------- СЕКЦИЯ С ТЕКСТОМ И КАРТИНКОЙ ------------------------------------------------------------------------------------------------*/
+.article__content {
+  display: flex;
+  flex-direction: column;
+  max-height: 60px;
+  overflow-y: hidden;
+  font-family: 'TTLakes';
+  color: #1b1c21;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  margin: 24px 16px 0px 16px;
+}
+
+.article__text--hidden {
+  display: none;
+}
+
+.main__button {
+  white-space: nowrap;
+  min-width: 100px;
+  min-height: 24px;
+  margin-left: 25px;
+  border: none;
+  background-repeat: no-repeat;
+  padding-bottom: 0px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  font-family: 'TTLakes';
+  font-weight: 500;
+  color: #1b1c21;
+  background-color: transparent;
+  text-align: left;
+}
+
+.main__button--span {
+  padding-left: 16px;
+}
+
+.main__button--main {
+  margin-top: 10px;
+}
+
+.main__button--hidden {
+  display: none;
+}
+
+.image__about {
+  margin-top: 16px;
+  width: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  min-height: 230px;
+}
+
+/*-------------------------------------------Код Свайпера------------------------------------------------------*/
+
+.swiper-title {
+  min-width: 320px;
+  height: 80px;
+  background-image: linear-gradient(-270deg, #f8f8f8 0%, #ffffff 98.61%);
+  border-top: 1px solid #d9fff5;
+  padding: 0px 16px 0px 16px;
+  display: flex;
+  align-items: center;
+}
+
+.swiper-title__text {
+  box-sizing: border-box;
+  margin: 0px;
+  font-family: 'TTLakes';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #7e7e82;
+  width: 256px;
+  flex-wrap: wrap;
+}
+
+.swiper-title--small {
+  height: 56px;
+}
+.swiper {
+  box-sizing: border-box;
+  margin-top: 16px;
+  margin-left: 16px;
+  width: 75%;
+  height: 124px;
+  margin-right: 0;
+  margin-bottom: 0px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  width: 240px;
+  height: 72px;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-wrapper {
+  height: 100%;
+}
+
+/*-----------------Стили второго свайпера----------*/
+
+.swiper--middle {
+  height: 212px;
+}
+
+.swiper-slide--middle {
+  height: 160px;
+}
+
+.swiper__text--middle {
+  height: 100%;
+}
+
+.swiper-slide__text {
+  padding-top: 16px;
+  text-align: left;
+}
+
+.wrap__icon--middle {
+  margin-top: auto;
+  margin-bottom: 16px;
+}
+
+/*-----------------Стили третьего свайпера----------*/
+.swiper--big {
+  height: 228px;
+}
+
+.swiper-slide--big {
+  box-sizing: border-box;
+  height: 200px;
+  width: 260px;
+  padding: 16px;
+}
+
+.swiper-slide__content {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 12px;
+}
+
+.swiper-slide__wrapper {
+  height: 100%;
+}
+
+.swiper-slide__title {
+  font-family: 'TTLakes';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  color: #7e7e82;
+  mix-blend-mode: normal;
+  opacity: 0.72;
+  line-height: 16px;
+  margin-bottom: 5px;
+}
+
+.swiper-slide__description {
+  font-family: 'TTLakes';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  color: #1b1c21;
+}
+
+.swiper-slide__content--small {
+  width: 81px;
+  float: left;
+}
+
+.form-button--small {
+  margin-top: 22px;
+  width: 119px;
+}
+
+.form-button__order {
+  background-color: transparent;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  padding-right: 17px;
+  font-weight: 700;
+  font-size: 12px;
+  font-family: 'TTLakes';
+  font-style: normal;
+  line-height: 24px;
+  letter-spacing: -0.15px;
+  color: #ffffff;
+}
+
+.form-button:hover {
+  background-color: #ffe0e9;
+  transition: background-color 0.5s;
+}
+
+.form-button:hover .form-button__order {
+  color: #ff3e79;
+  transition: color 0.5s;
+}
+
+.form-button:hover path {
+  fill: #ff3e79;
+}
+
+.form-button__icon {
+  width: 7px;
+  height: 10px;
+  display: flex;
+}
+
+
+.swiper__link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+  text-decoration: none;
+  color: #1b1c21;
+}
+
+.wrap__slides {
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 6px;
+}
+
+.fade-container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.fade-container__right {
+  top: 0;
+  right: 0;
+  background: linear-gradient(270deg, #f8f8f8 17%, hsla(0, 0%, 97.3%, 0));
+  position: absolute;
+  height: 100%;
+  width: 24px;
+  z-index: 5;
+}
+
+.fade-container__right--text-menu {
+  right: 15px;
+}
+
+.swiper-pagination {
+  display: flex;
+  left: 38px !important;
+  width: 220px !important;
+  bottom: 22px !important;
+  justify-content: space-between;
+}
+
+.swiper-pagination--2 {
+  bottom: 22px !important;
+}
+
+.swiper-pagination-bullet {
+  height: 12px !important;
+  width: 12px !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: #dddddd;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #b5b6bc;
+}
+
+.swiper-pagination--3 {
+  width: 108px !important;
+  left: 90px !important;
+  bottom: 0px !important;
+}
+
+.article__content--afterswiper {
+  width: 288px;
+  margin: 16px 16px 21px 16px;
+}
+
+.article__text {
+  font-family: 'TTLakes';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: #1b1c21;
+}
+
+.main__button--afterswiper {
+  white-space: nowrap;
+  min-width: 192px;
+  min-height: 50px;
+  margin-left: 16px;
+  margin-bottom: 45px;
+  padding-left: 0px;
+  border: none;
+  background: url(./img/more.svg) 20px;
+  background-position: 103px 24px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  text-align: left;
+  font-family: 'TTLakes';
+  font-weight: 500;
+  color: #1b1c21;
+}
+
+/*-------------------------------------------Конец кода Свайпера--------------------------------------------------------*/
+
+.wrap__logo {
+  margin-right: auto;
+}
+
+.wrap__icon {
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  background-color: transparent;
+  border-radius: 100%;
+  background-repeat: no-repeat;
+  border: none;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 2px solid #ff3e79;
+  transition: background-color 0.7s;
+}
+
+a:hover .wrap__icon {
+  background-color: #ffe0e9;
+  border: 2px solid transparent;
+}
+
+.wrap__logo--lenovo {
+  background-image: url(img/Bitmap.png);
+  width: 108px;
+  height: 32px;
+}
+
+.wrap__logo--samsung {
+  background-image: url(img/Samsung.png);
+  width: 116px;
+  height: 38px;
+}
+
+.wrap__logo--apple {
+  background-image: url(img/apple.png);
+  width: 44px;
+  height: 44px;
+}
+
+.wrap__logo--viewsonic {
+  background-image: url(img/viewsonic.png);
+  width: 128px;
+  height: 21px;
+}
+
+.wrap__logo--bosch {
+  background-image: url(img/bosch.png);
+  width: 128px;
+  height: 28px;
+}
+
+.wrap__logo--hp {
+  background-image: url(img/hp.png);
+  width: 52px;
+  height: 52px;
+}
+
+.wrap__logo--acer {
+  background-image: url(img/acer.png);
+  width: 94px;
+  height: 24px;
+}
+
+.wrap__logo--sony {
+  background-image: url(img/sony.png);
+  width: 128px;
+  height: 25px;
+}
+
+.wrap__logo--lenovo {
+  background-image: url(img/Bitmap.png);
+  width: 108px;
+  height: 32px;
+}
+
+.table-wrapper {
+  display: none;
+}
+
+/*--------------------------------------------FOOTER------------------------------------------------------------*/
+
+.footer {
+  width: 100%;
+  height: 155px;
+  background-color: #f8f8f8;
+  border-top: 1px solid #d9fff5;
+}
+
+.footer__about {
+  height: 32px;
+  font-family: 'TTLakes';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  color: #7e7e82;
+  mix-blend-mode: normal;
+  opacity: 0.72;
+  margin-bottom: 16px;
+  margin-top: 16px;
+}
+
+.footer__policy > a {
+  display: block;
+  text-decoration: none;
+  height: 16px;
+  padding: 0px;
+  font-family: 'TTLakes';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  color: #7e7e82;
+  mix-blend-mode: normal;
+  opacity: 0.72;
+  margin-bottom: 16px;
+}
+
+.footer__warning {
+  font-family: 'TTLakes';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  color: #7e7e82;
+  mix-blend-mode: normal;
+  opacity: 0.72;
+}
+
+.menu--active {
+  transform: translateX(0);
+  transition: transform 0.5s;
+  width: 100%;
+}
+
+.background-lighten {
+  display: none;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  opacity: 0.9;
+  z-index: 998;
+}
+
+.form__active {
+  transform: translateX(0);
+  transition: transform 0.5s;
+  width: 100%;
+  display: block;
+}
+
+.form__active--big {
+  right: 441px;
+  display: block;
+}
+
+/*---------------------------------------------------------------- МЕДИАЗАПРОСЫ ---------------------------------------------------------------------------*/
+
+/*------------------------------------------- МОДАЛЬНЫЕ ОКНА --------------------------------------------------------*/
+
+@media (min-width: 768px) {
+  .menu--active {
+    width: 320px;
+    box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02),
+      16px 0px 52px rgba(14, 24, 80, 0.2);
+  }
+
+  .form__wrapper {
+    min-width: 376px;
+    margin-right: 32px;
+    margin-left: 32px;
+  }
+
+  .icon-button--modal {
+    position: relative;
+    margin-bottom: 24px;
+  }
+
+  .form__h1::before {
+    left: -33px;
+  }
+
+  .form__title {
+    margin-top: 0px;
+  }
+
+  /*------------------------------------------- ШАПКА ДЕСКТОП 768 --------------------------------------------------------*/
+  .header {
+    margin-right: 24px;
+    margin-left: 24px;
+  }
+
+  .icon-button--call {
+    display: block;
+  }
+  .icon-button--chat {
+    display: block;
+  }
+  .icon-button--profile {
+    margin-right: 0px;
+    display: block;
+  }
+  .header__divider--left {
+    background-image: url(./img/divider.svg);
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 2px;
+    height: 32px;
+  }
+  .header-nav__logo {
+    margin-left: 0px;
+  }
+
+  .main-title__h1::before {
+    left: -24px;
+  }
+
+  .main-title {
+    margin-left: 24px;
+  }
+
+  .text-menu__navigation {
+    margin-left: 24px;
+  }
+  /*------------------------------------------- секция main 768 --------------------------------------------------------*/
+  .article {
+    display: flex;
+    margin-bottom: 24px;
+  }
+  .article__wrapper {
+    width: 100%;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main {
+    min-width: 768px;
+    min-height: 416px;
+  }
+
+  .image {
+    width: 100%;
+    min-height: 280px;
+    margin-right: 24px;
+  }
+
+  .article__content {
+    max-height: 160px;
+    margin-top: 32px;
+    margin-right: 48px;
+    line-height: 20px;
+    margin-left: 24px;
+  }
+  .image__about {
+    margin-top: 32px;
+  }
+
+  .article__text--hidden {
+    display: contents;
+  }
+
+  /*------------------------------------------- секция swiper-title 768 --------------------------------------------------------*/
+
+  .swiper-title {
+    height: 56px;
+    padding-left: 24px;
+  }
+
+  .swiper-title__text {
+    width: 340px;
+  }
+  .swiper {
+    margin: 24px;
+  }
+
+  .swiper--row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 165px;
+  }
+
+  .wrap {
+    flex-wrap: wrap;
+  }
+
+  .swiper-pagination {
+    display: none;
+  }
+
+  .fade-container {
+    display: none;
+  }
+
+  .wrap__slides {
+    margin-bottom: 16px;
+    width: 224px;
+    margin-right: 24px;
+  }
+
+  .main__button {
+    display: block;
+    max-width: 126px;
+    max-height: 24px;
+    margin-left: 32px;
+    border: none;
+    padding-bottom: 0px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    font-family: 'TTLakes';
+    color: #1b1c21;
+  }
+
+  .main__button--hidden {
+    margin-bottom: 32px;
+  }
+
+  /*--------------------------------- swiper 3  768 (table)-------------------------------------*/
+
+  .table-wrapper {
+    display: block;
+  }
+
+  .wrap--column {
+    display: none;
+  }
+
+  .table-wrapper {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .table {
+    border-collapse: collapse;
+    table-layout: auto;
+    width: 100%;
+  }
+
+  .table__cell--3 {
+    width: 11%;
+  }
+
+  .table__cell--1 {
+    width: 53%;
+    padding-left: 16px;
+  }
+
+  .form-button--margin--no {
+    margin-left: auto;
+    margin-right: 16px;
+    margin-bottom: 16px;
+  }
+
+  .table__body {
+    color: #1b1c21;
+    background-color: #ffffff;
+    border-radius: 6px;
+    border-style: hidden;
+    box-shadow: 0 0 0 3px #ffffff;
+  }
+
+  .table__header-cell {
+    height: 16px;
+    font-family: 'TTLakes';
+    text-align: left;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #7e7e82;
+    mix-blend-mode: normal;
+    opacity: 0.72;
+    padding-top: 31px;
+    padding-bottom: 16px;
+  }
+
+  .table__header-cell--first {
+    padding-left: 40px;
+  }
+
+  .swiper--big {
+    display: none;
+  }
+
+  .article__content--afterswiper {
+    width: 421px;
+    margin: 24px 0px 16px 24px;
+  }
+
+  .article__br {
+    display: none;
+  }
+
+  .main__button--afterswiper {
+    margin-left: 24px;
+    background-position: 293px -2px;
+    min-height: 24px;
+  }
+
+  .article--down {
+    min-height: 0;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 105px;
+  }
+
+  .footer__content {
+    margin-bottom: 0;
+    margin-top: 32px;
+  }
+
+  .footer__about {
+    text-align: left;
+    margin-left: 24px;
+  }
+
+  .footer__policy {
+    text-align: center;
+  }
+
+  .footer__warning {
+    text-align: right;
+    margin-right: 24px;
+    width: 213px;
+  }
+
+  .footer__br {
+    display: none;
+  }
+  .table__row td {
+    position: relative;
+  }
+  .table__cell--border::before {
+    content: '';
+    display: block;
+    height: 1px;
+    overflow: hidden;
+    background: #eaeaea;
+    position: absolute;
+    left: 20px;
+    right: 0;
+    bottom: 0;
+  }
+  .table__cell--button:before {
+    left: 0;
+    right: 20px;
+  }
+
+  .table__cell--3:before {
+    left: 0;
+    right: 0px;
+  }
+
+  .table__cell--2:before {
+    left: 0;
+    right: 0px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .icon-button--modal {
+    margin-top: 0;
+    position: relative;
+    top: 38px;
+    left: -105px;
+    margin-bottom: 0;
+  }
+
+  
+
+  .form {
+    width: 440px;
+    box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02),
+      16px 0px 52px rgba(14, 24, 80, 0.2);
+    margin-left: auto;
+    border-left: 1px solid #d9fff5;
+  }
+  .site {
+    flex-direction: row;
+  }
+
+  .menu {
+    min-width: 306px;
+    position: inherit;
+    transform: translateX(0);
+  }
+
+  .main {
+    display: flex;
+    min-width: 1120px;
+  }
+
+  .background-lighten {
+    display: none;
+  }
+
+  .icon-button--close {
+    display: none;
+  }
+
+  .header {
+    display: none;
+  }
+
+  .swiper-title {
+    padding-left: 32px;
+  }
+
+  .swiper {
+    margin-left: 32px;
+  }
+
+  .main-title {
+    font-family: 'TTLakes';
+    min-height: 40px;
+    margin-top: 42px;
+    margin-left: 35px;
+    margin-right: 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .main-title__button {
+    display: flex;
+    align-self: center;
+  }
+
+  .main-title__button-wrapper {
+    display: flex;
+    align-self: center;
+    min-width: 100px;
+  }
+  .main-title__button-item--repair {
+    display: block;
+    margin-right: 32px;
+  }
+  .main-title__button-item--checkstatus {
+    display: flex;
+    align-self: center;
+    margin-right: 0px;
+  }
+
+  .main-title__button-label[hidden] {
+    display: block;
+  }
+
+  .main-title__button-label {
+    margin-right: 9px;
+    margin-top: 9px;
+    font-family: 'TTLakes';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1b1c21;
+    text-align: center;
+    border: none;
+  }
+
+  .icon-button {
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    border: none;
+    flex-shrink: 0;
+  }
+
+  .main-title__button-label[hidden] {
+    display: block;
+  }
+
+  .main-title__button-label[hidden] {
+    display: block;
+  }
+
+  .main-title__h1::before {
+    left: -34px;
+  }
+
+  .text-menu {
+    margin-top: 0px;
+  }
+
+  .text-menu__navigation {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    overflow: scroll;
+    min-width: 320px;
+    margin-right: 16px;
+    margin-left: 34px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    margin-top: 8px;
+  }
+
+  .article__content {
+    margin-top: 57px;
+    margin-right: 36px;
+    margin-left: 34px;
+    width: 490px;
+    height: 160px;
+  }
+
+  .article__content--afterswiper {
+    margin-top: 32px;
+    margin-left: 32px;
+  }
+
+  .main__button {
+    margin-left: 40px;
+  }
+
+  .main__button--afterswiper {
+    margin-left: 32px;
+  }
+
+  .image {
+    min-height: 383px;
+    margin-right: 36px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .menu__item a::before {
+    left: -24px;
+  }
+
+  .menu__footer {
+    margin-top: 241px;
+    margin-bottom: auto;
+  }
+
+  .wrap__slides {
+    width: 240px;
+    margin-right: 32px;
+  }
+
+  .table-wrapper {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .footer__about {
+    margin-left: 32px;
+  }
+
+  .footer__warning {
+    margin-right: 32px;
+  }
+}

@@ -1,0 +1,26 @@
+.image {
+    @media (min-width: $screen-md) {
+      width: 100%;
+      min-height: 280px;
+      margin-right: 24px;
+    }
+  
+    @media (min-width: $screen-xl) {
+      min-height: 383px;
+      margin-right: 36px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  
+    &__about {
+      margin-top: 16px;
+      width: 100%;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      min-height: 230px;
+    
+      @media (min-width: $screen-md) {
+        margin-top: 32px;
+      }
+    }
+  }
