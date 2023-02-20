@@ -1,6 +1,6 @@
 import '../scss/style.scss'
 
-var init = false
+const init = false
 function swiperCard() {
   if (window.innerWidth <= 768) {
     if (!init) {
@@ -23,7 +23,7 @@ swiperCard()
 window.addEventListener('resize', swiperCard)
 
 // Код для первого свайпера //
-var button = document.getElementById('block')
+const button = document.getElementById('block')
 button.addEventListener('click', function myFunction() {
   if (window.innerWidth < '966') {
     if (document.getElementById('main').style.height != '355px') {
@@ -49,7 +49,7 @@ button.addEventListener('click', function myFunction() {
 })
 
 // Код для кнопок показать / скрыть в первом экране + раскрывающийся текстовый блок //
-var button__main = document.getElementById('button__main')
+const button__main = document.getElementById('button__main')
 button__main.addEventListener('click', function functionMain() {
   if (window.innerWidth < '768') {
     if (document.getElementById('span').innerHTML == 'Читать далее') {
@@ -86,8 +86,8 @@ button__main.addEventListener('click', function functionMain() {
 
 // Код для второго свайпера (виды техники) //
 
-var button = document.getElementById('block-2')
-button.addEventListener('click', function myFunctionBottom() {
+const buttonSwipe = document.getElementById('block-2')
+buttonSwipe.addEventListener('click', function myFunctionBottom() {
   if (window.innerWidth < '966') {
     if (document.getElementById('main-2').style.height != '750px') {
       document.getElementById('main-2').style.height = '750px'
@@ -114,10 +114,10 @@ button.addEventListener('click', function myFunctionBottom() {
 // Всё что выше не менялось
 
 // Создаем перемернные для кнопок в главном меню слева //
-var burger = document.getElementById('burger')
-var close = document.querySelector('.icon-button--close')
-var menu = document.querySelector('.menu')
-var modal = document.querySelector('.icon-button--message')
+const burger = document.getElementById('burger')
+const close = document.querySelector('.icon-button--close')
+const menu = document.querySelector('.menu')
+const modal = document.querySelector('.icon-button--message')
 
 // Создаем обработичк и функцию, которая раскрывает меню при нажатии на бургер и показывает подложку в нужном промежутке //
 burger.addEventListener('click', function myBurgerOpen() {
@@ -159,7 +159,7 @@ document
   })
 
 // При клике на крестик у модалки закрываем всплывающее окно и убираем подложку//
-var closeFeedback = document.querySelector('.icon-button--modal')
+const closeFeedback = document.querySelector('.icon-button--modal')
 closeFeedback.addEventListener('click', function myFeedbackClose() {
   if (window.innerWidth < '1440') {
     document.querySelector('.feedback').classList.toggle('form__active')
@@ -170,7 +170,7 @@ closeFeedback.addEventListener('click', function myFeedbackClose() {
 })
 
 // Создаем функцию для клика по иконке телефон в главном меню и добавляем подложку для десктопа //
-var modalCall = document.querySelector('.icon-button--phone')
+const modalCall = document.querySelector('.icon-button--phone')
 modalCall.addEventListener('click', function modalCallOpen() {
   if (window.innerWidth < '1440') {
     document.querySelector('.call').classList.toggle('form__active')
@@ -181,7 +181,7 @@ modalCall.addEventListener('click', function modalCallOpen() {
 })
 
 // При клике на крестик у модалки звонок закрываем окно и убираем подложку, если есть //
-var closeCall = document.getElementById('modal-close')
+const closeCall = document.getElementById('modal-close')
 closeCall.addEventListener('click', function myCallClose() {
   if (window.innerWidth < '1440') {
     document.querySelector('.call').classList.toggle('form__active')
